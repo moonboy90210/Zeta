@@ -39,7 +39,7 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add('visible');
     } else {
       // Remove visible class when section scrolls out
-      entry.target.classList.remove('visible');
+    //   entry.target.classList.remove('visible');
     }
   });
 }, {
