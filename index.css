@@ -73,7 +73,7 @@ a {
 	/* background-attachment: fixed; */
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.section {
+/* .section {
 	opacity: 0;
 	transition: all 0.3s ease-out;
   }
@@ -91,7 +91,7 @@ a {
 	opacity: 0;
 	transform: translateY(50px);
 	transition: all 0.3s ease-out;
-  }
+  } */
 
 /* home  */ 
 #home {
@@ -99,7 +99,7 @@ a {
 }
 
 .home-header {
-	padding-top: 350px;
+	padding-top: 300px;
 }
 
 .home-h1 {
