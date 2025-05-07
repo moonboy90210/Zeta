@@ -1,18 +1,19 @@
-
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	/* font-family: "Poppins", sans-serif; */
 }
+
 /* remove horizontal scroll bar on screen */
 html {
 	max-width: 100%;
-	overflow-x: hidden; 
+	overflow-x: hidden;
 
 }
+
 body {
-	overflow-x: hidden; 
+	overflow-x: hidden;
 	overflow-y: hidden;
 	max-width: 100%;
 	line-height: 1.4rem;
@@ -21,97 +22,115 @@ body {
 	z-index: 1000;
 
 }
+
 #navbar {
 	width: 100%;
 	top: 0px;
 	padding: 1rem;
 	z-index: 1000;
 	transition: 0.5s ease-in-out;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 nav {
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 999;
 	transition: top 0.3s ease-in-out;
-	
+
 }
+
 .navbar-brand {
 	color: white;
 	font-size: 1.2rem;
 	font-weight: 500;
-} .nav-link {
+}
+
+.nav-link {
 	color: white;
 	font-size: 1rem;
 }
-a { 
+
+a {
 	text-decoration: none;
 }
+
 #offcanvasNavbar {
 	background-color: #7c7c7c;
 	max-width: 70%;
 }
+
 /* Default nav style (before scroll) */
 .navbar {
 	transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  /* After scroll */
-  .navbar.scrolled {
+}
+
+/* After scroll */
+.navbar.scrolled {
 	background-color: #fff;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  .navbar.scrolled .nav-link {
+}
+
+.navbar.scrolled .nav-link {
 	color: black;
-  }
-  .navbar.scrolled .navbar-brand {
+}
+
+.navbar.scrolled .navbar-brand {
 	color: black;
-  }
-  /* Link styles */
-  .navbar .nav-link {
+}
+
+/* Link styles */
+.navbar .nav-link {
 	transition: color 0.3s ease;
-  }
-  
-  .navbar.scrolled .nav-link:hover {
-	color: #f16821; /* Orange on hover */
-  }
-  .navbar.scrolled .navbar-brand:hover {
+}
+
+.navbar.scrolled .nav-link:hover {
 	color: #f16821;
-  }
-  
-  /* -------------------- */
-  .dropdown-menu {
+	/* Orange on hover */
+}
+
+.navbar.scrolled .navbar-brand:hover {
+	color: #f16821;
+}
+
+/* -------------------- */
+.dropdown-menu {
 	border: 0px;
 	/* background-color: #f16821; */
-  }
+}
+
 .section {
 	opacity: 0;
 	transition: all 0.3s ease-out;
-  }
+}
+
 .section.visible {
 	opacity: 1;
 	transform: translateX(0);
-  }
+}
+
 .fade-left {
 	transform: translateX(-50px);
-  }
+}
+
 .fade-right {
 	transform: translateX(50px);
-  }
+}
+
 .fade-up {
 	opacity: 0;
 	transform: translateY(50px);
 	transition: all 0.3s ease-out;
-  }
+}
 
-/* home  */ 
+/* home  */
 #home {
 	height: 100vh;
 }
 
 .home-header {
-	padding-top: 350px; 
+	padding-top: 350px;
 }
 
 .home-h1 {
@@ -158,7 +177,7 @@ a {
 	border-top: 0;
 	border-radius: 1px;
 	/* how to center div */
-	margin:auto;
+	margin: auto;
 	width: 20%;
 	height: 1px;
 	margin-bottom: 30px;
@@ -187,7 +206,7 @@ ul {
 
 /* Team */
 
-.card-img-top { 
+.card-img-top {
 	width: 70%;
 	margin: auto;
 	background-repeat: no-repeat;
@@ -201,6 +220,7 @@ ul {
 	background-color: rgba(196, 192, 192, 0.205);
 	/* height: 100vh; */
 }
+
 #services a {
 	color: #f16821;
 }
@@ -211,11 +231,12 @@ div.scroll-container {
 	overflow: auto;
 	white-space: nowrap;
 	padding: 10px;
-  }
-  div.scroll-container img {
+}
+
+div.scroll-container img {
 	width: 100%;
 	height: auto;
-  }
+}
 
 /* watch  */
 .fa-circle-play {
@@ -226,25 +247,29 @@ div.scroll-container {
 	font-weight: 100;
 
 }
+
 .watch-h2 {
 	font-size: 2.5rem;
 	font-weight: 300;
 }
+
 .icon-play {
 	margin-top: 90px;
 }
+
 .bg-image {
 	position: relative;
 	min-height: 90vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	  /* Add the blur effect */
-	  /* filter: blur(3px);
+	/* Add the blur effect */
+	/* filter: blur(3px);
 	  -webkit-filter: blur(3px); */
 }
+
 .bg-image2 {
-	position:relative;                       
+	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -264,6 +289,7 @@ div.scroll-container {
 	background: #333333;
 	color: #fff;
 }
+
 .btn-home2 {
 	color: #fff;
 	background-color: #f16821;
@@ -278,22 +304,26 @@ div.scroll-container {
 }
 
 @media screen and (min-width: 600px) {
-	
+
 	.home-h1 {
 		font-size: 3rem;
 	}
+
 	.home-h2 {
 		font-size: 1.3rem;
 	}
+
 	.btn-home2 {
-		width: 300px;	
+		width: 300px;
 		height: 60px;
 		font-size: 1.5rem;
 		font-weight: 700;
-		}
+	}
+
 	.aboutImg {
 		min-width: 530px;
 	}
+
 	#contactInfo {
 		margin-top: 15px;
 	}
@@ -301,108 +331,128 @@ div.scroll-container {
 }
 
 @media screen and (min-width: 814px) {
-	.home-header{
+	.home-header {
 		padding-top: 30rem;
-		}
+	}
+
 	.w-50 {
-		max-width: 350px; 
+		max-width: 350px;
 		height: 400px;
 
 	}
+
 	.aboutImg {
 		width: 700px;
 		height: 400px;
 	}
-	.fa-solid {
+
+	.service-icon {
+		/* padding-left: 100px; */
 		font-size: 40px;
 		position: relative;
 		justify-content: flex-start;
 		top: 0;
-		
 	}
-	.service-icon {
-		/* padding-left: 100px; */
-		
-	}
+
 	.icon-play {
 		margin-top: 10px;
 	}
+
 	.watch-h2 {
 		font-size: 2rem;
 		font-weight: 400;
 	}
 }
+
 @media screen and (min-width: 910px) {
+
 	/* .home-header{
 		padding-top: 40rem;
 	} */
 	.home-h2 {
 		font-size: 1.5rem;
 	}
+
 	.watch-h2 {
 		font-size: 2.5rem;
 		font-weight: 200;
 	}
+
 	.carousel-inner {
 		padding: 0 100px 0 100px;
 	}
+
 	div.scroll-container img {
 		width: 31rem;
 		height: 30rem;
 		padding: 10px;
-	  }
+	}
 }
+
 @media screen and (min-width: 1028px) {
+
 	/* .home-header{
 		padding-top: 15rem;
 	} */
 	.home-h1 {
 		font-size: 3.5rem;
 	}
+
 	.home-h2 {
 		font-size: 1.6rem;
 	}
+
 	.aboutImg {
 		/* margin-top: 100px; */
 		width: 460px;
 		height: 400px;
 	}
 }
+
 @media screen and (min-width: 1200px) {
 	body {
-	font-size: 0.9rem;
-	font-weight: 200;
-	line-height: 1.8rem;
+		font-size: 1rem;
+		font-weight: 200;
+		line-height: 1.8rem;
 	}
+
 	.navbar-brand {
 		font-size: 1.5rem;
 	}
+
 	.nav-link {
 		font-size: 1rem;
 	}
-	.home-header{
+
+	.home-header {
 		padding-top: 20rem;
 	}
+
 	.home-h1 {
 		font-size: 3.2rem;
 	}
+
 	.home-h2 {
 		font-size: 1.4rem;
 	}
+
 	.btn-home2 {
-	width: 210px;	
-	height: 50px;
-	font-size: 1.1rem;
-	font-weight: 500;
+		width: 210px;
+		height: 50px;
+		font-size: 1.1rem;
+		font-weight: 500;
 	}
+
 	div.scroll-container img {
 		width: 33%;
-		height: 40rem;
+		height: 25rem;
 		padding: 10px;
-	  }
-	 .bg-image2 {
+	}
+
+	.bg-image2 {
 		height: 100vh;
-	 }
+	}
+
 	.aboutImg {
 		width: 620px;
 		height: 380px;
