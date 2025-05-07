@@ -8,19 +8,35 @@ $firstName = $_POST["firstName"] ?? '';
   $subject = $_POST["subject"] ?? '';
   $message = $_POST["message"] ?? '';
 
-  // Example: Email handling (you can also insert into DB here)
-	$to = "timone427@gmail.com";
-  $fullName = "$firstName $lastName";
-  $body = "From: $fullName\nEmail: $email\n\nSubject: $subject\n\nMessage:\n$message";
+  // Connect to database
+  $servername = "localhost";
+  $username = "root";       // XAMPP/WAMP default
+  $password = "";           // Leave empty for XAMPP
+  $dbname = "zeta_form";
 
-  if (mail($to, $subject, $body, "From: $email")) {
-    echo "Message sent successfully!";
-  } else {
-    echo "Failed to send message.";
+  $conn = new mysqli($servername, $username, $password, $dbname);
+
+  if ($conn->connect_error) {
+    http_response_code(500);
+    echo "Database connection failed: " . $conn->connect_error;
+    exit;
   }
+  // Prepare & bind
+  $stmt = $conn->prepare("INSERT INTO messages (first_name, last_name, email, subject, message) VALUES (?, ?, ?, ?, ?)");
+  $stmt->bind_param("sssss", $firstName, $lastName, $email, $subject, $message);
+
+  if ($stmt->execute()) {
+    echo "Your message has been submitted successfully.";
+  } else {
+    http_response_code(500);
+    echo "Error: " . $stmt->error;
+  }
+
+  $stmt->close();
+  $conn->close();
 } else {
+  http_response_code(405);
   echo "Invalid request.";
 }
-
-
 ?>
+

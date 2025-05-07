@@ -1,19 +1,4 @@
-
-// window.onscroll = function () {
-// 	scrollFunction();
-//   };
-  
-//   function scrollFunction() {
-// 	const nav = document.querySelector("nav");
-	
-// 	// Apply 'sticky' only after scrolling more than 50px
-// 	if (window.scrollY > 60) {
-// 	  nav.classList.add("sticky");
-// 	} else {
-// 	  nav.classList.remove("sticky");
-// 	}
-//   }
-
+// ----------NAVBAR responsive----------
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function () {
@@ -30,6 +15,16 @@ window.addEventListener("scroll", function () {
 	lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Avoid negative scroll
 });
 
+// this is the code to change background and font-color on scroll down
+window.addEventListener("scroll", function () {
+	const nav = document.querySelector(".navbar");
+	if (window.scrollY > 70) {
+	  nav.classList.add("scrolled");
+	} else {
+	  nav.classList.remove("scrolled");
+	}
+  });
+//   -----------------------------------------
 
 const sections = document.querySelectorAll('.section'); 
 
@@ -39,7 +34,7 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add('visible');
     } else {
       // Remove visible class when section scrolls out
-    //   entry.target.classList.remove('visible');
+      entry.target.classList.remove('visible');
     }
   });
 }, {
@@ -48,11 +43,15 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach(section => {
   observer.observe(section);
-});
+}); 
 
 
 // ----------------------CONTACT FORM------------------------
-
+fetch("http://localhost/zeta/contact.php", {
+	method: "POST",
+	body: formData
+  });
+  
 document.getElementById("contactForm").addEventListener("submit", function (e) {
 	e.preventDefault(); // Prevent default form submission
   
