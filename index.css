@@ -248,8 +248,6 @@ div.scroll-container {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	/* background-attachment: fixed; */
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .carousel-text {
@@ -294,7 +292,7 @@ div.scroll-container {
 		font-weight: 700;
 		}
 	.aboutImg {
-		width: 640px;
+		min-width: 530px;
 	}
 	#contactInfo {
 		margin-top: 15px;
@@ -304,19 +302,33 @@ div.scroll-container {
 
 @media screen and (min-width: 814px) {
 	.home-header{
-		padding-top: 25rem;
+		padding-top: 30rem;
 		}
 	.w-50 {
 		max-width: 350px; 
 		height: 400px;
 
 	}
-
+	.aboutImg {
+		width: 700px;
+		height: 400px;
+	}
+	.fa-solid {
+		font-size: 40px;
+		position: relative;
+		justify-content: flex-start;
+		top: 0;
+		
+	}
+	.service-icon {
+		/* padding-left: 100px; */
+		
+	}
 	.icon-play {
-		margin-top: 180px;
+		margin-top: 10px;
 	}
 	.watch-h2 {
-		font-size: 4rem;
+		font-size: 2rem;
 		font-weight: 400;
 	}
 }
@@ -327,32 +339,12 @@ div.scroll-container {
 	.home-h2 {
 		font-size: 1.5rem;
 	}
-	.aboutImg {
-		width: 700px;
-		height: 400px;
-	}
-	.icon-play {
-		margin-top: 0px;
-	}
 	.watch-h2 {
 		font-size: 2.5rem;
-		font-weight: 100;
+		font-weight: 200;
 	}
-}
-@media screen and (min-width: 1024px) {
-	/* .home-header{
-		padding-top: 15rem;
-	} */
-	.home-h1 {
-		font-size: 2rem;
-	}
-	.home-h2 {
-		font-size: 1.5rem;
-	}
-	.aboutImg {
-		/* margin-top: 100px; */
-		width: 460px;
-		height: 400px;
+	.carousel-inner {
+		padding: 0 100px 0 100px;
 	}
 	div.scroll-container img {
 		width: 31rem;
@@ -360,30 +352,47 @@ div.scroll-container {
 		padding: 10px;
 	  }
 }
+@media screen and (min-width: 1028px) {
+	/* .home-header{
+		padding-top: 15rem;
+	} */
+	.home-h1 {
+		font-size: 3.5rem;
+	}
+	.home-h2 {
+		font-size: 1.6rem;
+	}
+	.aboutImg {
+		/* margin-top: 100px; */
+		width: 460px;
+		height: 400px;
+	}
+}
 @media screen and (min-width: 1200px) {
 	body {
-	font-size: 1.3rem;
-	line-height: 2.2rem;
+	font-size: 0.9rem;
+	font-weight: 200;
+	line-height: 1.8rem;
 	}
 	.navbar-brand {
 		font-size: 1.5rem;
 	}
 	.nav-link {
-		font-size: 1.3rem;
+		font-size: 1rem;
 	}
 	.home-header{
-		padding-top: 23rem;
+		padding-top: 20rem;
 	}
 	.home-h1 {
-		font-size: 4rem;
+		font-size: 3.2rem;
 	}
 	.home-h2 {
-		font-size: 2rem;
+		font-size: 1.4rem;
 	}
 	.btn-home2 {
-	width: 300px;	
-	height: 60px;
-	font-size: 1.5rem;
+	width: 210px;	
+	height: 50px;
+	font-size: 1.1rem;
 	font-weight: 500;
 	}
 	div.scroll-container img {
@@ -395,8 +404,8 @@ div.scroll-container {
 		height: 100vh;
 	 }
 	.aboutImg {
-		width: 730px;
-		height: 500px;
+		width: 620px;
+		height: 380px;
 	}
 
 	#contactInfo {
