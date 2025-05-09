@@ -1,28 +1,21 @@
 <?php 
 
+session_start();
+
+include 'connect.php'; // Include the database connection file
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-$firstName = $_POST["firstName"] ?? '';
-  $lastName = $_POST["lastName"] ?? '';
-  $email = $_POST["email"] ?? '';
-  $subject = $_POST["subject"] ?? '';
-  $message = $_POST["message"] ?? '';
+  $firstName = htmlspecialchars($_POST['firstName'] ?? '');
+  $lastName = htmlspecialchars($_POST['lastName'] ?? '');
+  $email = htmlspecialchars($_POST['email'] ?? '');
+  $subject = htmlspecialchars($_POST['subject'] ?? '');
+  $message = htmlspecialchars($_POST['message'] ?? '');
+  $newSub = htmlspecialchars($_POST['newSub'] ?? '');
 
-  // Connect to database
-  $servername = "localhost";
-  $username = "root";       // XAMPP/WAMP default
-  $password = "";           // Leave empty for XAMPP
-  $dbname = "zeta_form";
 
-  $conn = new mysqli($servername, $username, $password, $dbname);
-
-  if ($conn->connect_error) {
-    http_response_code(500);
-    echo "Database connection failed: " . $conn->connect_error;
-    exit;
-  }
   // Prepare & bind
-  $stmt = $conn->prepare("INSERT INTO messages (first_name, last_name, email, subject, message) VALUES (?, ?, ?, ?, ?)");
+  $stmt = $conn->prepare("INSERT INTO formdata (first_name, last_name, email, subject, message) VALUES (?, ?, ?, ?, ?)");
   $stmt->bind_param("sssss", $firstName, $lastName, $email, $subject, $message);
 
   if ($stmt->execute()) {
