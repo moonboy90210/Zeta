@@ -16,7 +16,7 @@
 
 
 <header>
-	<div class="bg-image" style="background-image: url(img/logistics\ background.jpg); background-attachment: fixed;">
+	<div class="bg-image">
 		<!-- place navbar here -->
 		<nav id="navbar" class="navbar navbar-expand-lg fixed-top">
 			<div class="container">
@@ -121,9 +121,8 @@
 	</section>
 
 
-	<section id="work" class="bg-image2"
-		style="background-image: url(img/depot-worker.jpg); background-attachment: fixed;">
-		<div class="container py-5" id="work">
+	<section id="work" class="bg-image2" >
+		<div class="container py-5">
 			<div class="row justify-content-center">
 				<div class="col-md-7 text-light text-center section fade-up">
 					<h2 class="h1-header">HOW IT WORKS</h2>
@@ -408,10 +407,10 @@
 	</section>
 
 	<section id="watch">
-		<div class="bg-image2" style="background-image: url(img/depot-worker.jpg); height: 60vh; background-attachment: fixed; ">
+		<div class="bg-image2" style="height: 60vh;">
 			<div class="row justify-content-center">
 				<div class="col-md-7 text-center icon-play section fade-left">
-					<a href="#" class="my-5 d-inline-block">
+					<a href="#" class="my-5 d-inline-block" title="watch video">
 						<i class="fa-regular fa-circle-play fa-xl"></i>
 					</a>
 					<h2 class="text-white watch-h2">Watch The Video</h2>
@@ -503,7 +502,7 @@
 				</div>
 			</div>
 			<div class="card-group row">
-				<div class="col-md-12 col-lg-4 col-xl-4 py-3 p-3 section fade-left">
+				<div class="col-md-6 col-lg-4 col-xl-4 py-3 p-3 section fade-left">
 					<div class="card border-0">
 						<img src="img/delivery-person.jpg" class="card-img-blog" alt="Delivery Man">
 						<div class="card-body">
@@ -515,7 +514,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-12 col-lg-4 col-xl-4 py-3 p-3 section fade-up">
+				<div class="col-md-6 col-lg-4 col-xl-4 py-3 p-3 section fade-up">
 					<div class="card border-0">
 						<img src="img/truck-vehicle.jpg" class="card-img-blog" alt="Depot Worker">
 						<div class="card-body">
@@ -527,7 +526,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-12 col-lg-4 col-xl-4 py-3 p-3 section fade-right">
+				<div class="col-md-6 col-lg-4 col-xl-4 py-3 p-3 section fade-right">
 					<div class="card border-0">
 						<img src="img/aerial-view-container.jpg" class="card-img-blog" alt="...">
 						<div class="card-body">
@@ -560,7 +559,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-6 section fade-left">
-					<form id="contactForm" action="POST">
+					<form id="contactForm" action="contact.php" method="post">
 						<div class="form-group">
 							<label for="exampleFormControlInput1" class="form-label"></label>
 							<input type="name" class="form-control" id="firstName" name="firstName"
@@ -584,7 +583,7 @@
 						<div class="form-group">
 							<button type="submit" class="btn btn-outline-dark btn-home text-uppercase"
 								value="Send Message">Send
-								Message</button>
+								Message</button> 
 						</div>
 						<div id="formMessage" class="mt-3"></div>
 					</form>
@@ -655,7 +654,7 @@
 					<form method="post">
 						<p>Subscribe to stay informed on the latest News and Updates on our brand.</p>
 						<div class="input-group">
-							<input type="email" class="form-control" name="newSub" placeholder="Enter Email"
+							<input type="email" class="form-control" id="newSub" name="newSub" placeholder="Enter Email"
 								aria-label="Email" aria-describedby="button-addon2">
 							<button class="btn btn-home" type="submit" name="submit"
 								id="button-addon2">Subscribe</button>

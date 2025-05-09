@@ -262,7 +262,9 @@ div.scroll-container img {
 	min-height: 90vh;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center center;
+	background-image: url(img/background.jpg);
+	 background-attachment: fixed;
 	/* Add the blur effect */
 	/* filter: blur(3px);
 	  -webkit-filter: blur(3px); */
@@ -273,6 +275,8 @@ div.scroll-container img {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-image: url(img/depot-worker.jpg);
+	background-attachment: fixed;
 }
 
 .carousel-text {
@@ -288,6 +292,7 @@ div.scroll-container img {
 .footer {
 	background: #333333;
 	color: #fff;
+	padding: 4em 0; 
 }
 
 .btn-home2 {
@@ -319,6 +324,13 @@ div.scroll-container img {
 		font-size: 1.5rem;
 		font-weight: 700;
 	}
+	.service-icon {
+		/* padding-left: 100px; */
+		font-size: 40px;
+		position: relative;
+		justify-content: flex-start;
+		top: 0;
+	}
 
 	.aboutImg {
 		min-width: 530px;
@@ -344,14 +356,7 @@ div.scroll-container img {
 	.aboutImg {
 		width: 700px;
 		height: 400px;
-	}
 
-	.service-icon {
-		/* padding-left: 100px; */
-		font-size: 40px;
-		position: relative;
-		justify-content: flex-start;
-		top: 0;
 	}
 
 	.icon-play {
@@ -455,7 +460,7 @@ div.scroll-container img {
 
 	.aboutImg {
 		width: 620px;
-		height: 380px;
+		height: 400px;
 	}
 
 	#contactInfo {
