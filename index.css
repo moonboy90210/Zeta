@@ -264,7 +264,7 @@ div.scroll-container img {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: url(img/background.jpg);
-	 background-attachment: fixed;
+	 /* background-attachment: fixed; */
 	/* Add the blur effect */
 	/* filter: blur(3px);
 	  -webkit-filter: blur(3px); */
@@ -276,7 +276,7 @@ div.scroll-container img {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-image: url(img/depot-worker.jpg);
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 }
 
 .carousel-text {
