@@ -44,34 +44,3 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
   observer.observe(section);
 }); 
-
-
-// ----------------------CONTACT FORM------------------------
-fetch("http://localhost/zeta/contact.php", {
-	method: "POST",
-	body: formData
-  });
-  
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-	e.preventDefault(); // Prevent default form submission
-  
-	const formData = new FormData(this);
-
-	fetch("contact.php", {
-		method: "POST",
-		body: formData
-	  })
-	  .then(response => response.text())
-	  .then(data => {
-		const formMessage = document.getElementById("formMessage");
-		formMessage.innerHTML = `<div class="alert alert-primary">Thank you for reaching out!</div>`;
-		document.getElementById("contactForm").reset();
-	  })
-	  .catch(error => {
-		const formMessage = document.getElementById("formMessage");
-		formMessage.innerHTML = `<div class="alert alert-danger">An error occurred. Please try again later.</div>`;
-		console.error("Error:", error);
-	  });
-
-
-});

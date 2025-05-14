@@ -51,6 +51,10 @@ nav {
 	color: white;
 	font-size: 1rem;
 }
+.offcanvas-title {
+	color: white;
+
+}
 
 a {
 	text-decoration: none;
@@ -77,6 +81,9 @@ a {
 }
 
 .navbar.scrolled .navbar-brand {
+	color: black;
+}
+.navbar.scrolled .offcanvas-title {
 	color: black;
 }
 
@@ -119,7 +126,7 @@ a {
 }
 
 .fade-up {
-	opacity: 0;
+	/* opacity: 0; */
 	transform: translateY(50px);
 	transition: all 0.3s ease-out;
 }
@@ -218,7 +225,7 @@ ul {
 
 #services {
 	background-color: rgba(196, 192, 192, 0.205);
-	/* height: 100vh; */
+	
 }
 
 #services a {
@@ -227,7 +234,6 @@ ul {
 
 /* industries */
 div.scroll-container {
-	/* background-color: #333; */
 	overflow: auto;
 	white-space: nowrap;
 	padding: 10px;
@@ -239,6 +245,7 @@ div.scroll-container img {
 }
 
 /* watch  */
+
 .fa-circle-play {
 	font-size: 80px;
 	color: #fff;
@@ -259,24 +266,41 @@ div.scroll-container img {
 
 .bg-image {
 	position: relative;
-	min-height: 90vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-image: url(img/background.jpg);
-	 /* background-attachment: fixed; */
-	/* Add the blur effect */
-	/* filter: blur(3px);
-	  -webkit-filter: blur(3px); */
+	background-image: url(img/background2.jpg);
+	background-attachment: fixed;
+
+}
+/* add black overlay to background image */
+.bg-image::before {    
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+	  background-color: rgba(0,0,0,0.40);
 }
 
 .bg-image2 {
 	position: relative;
+	padding: 20px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-image: url(img/depot-worker.jpg);
-	/* background-attachment: fixed; */
+	background-image: url(img/depot-worker-edit.jpg);
+	background-attachment: fixed;
+}
+.bg-image2::before {    
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+	  background-color: rgba(0,0,0,0.55);
 }
 
 .carousel-text {
@@ -325,7 +349,6 @@ div.scroll-container img {
 		font-weight: 700;
 	}
 	.service-icon {
-		/* padding-left: 100px; */
 		font-size: 40px;
 		position: relative;
 		justify-content: flex-start;
@@ -394,11 +417,8 @@ div.scroll-container img {
 	}
 }
 
-@media screen and (min-width: 1028px) {
+@media screen and (min-width: 1023px) {
 
-	/* .home-header{
-		padding-top: 15rem;
-	} */
 	.home-h1 {
 		font-size: 3.5rem;
 	}
@@ -408,7 +428,6 @@ div.scroll-container img {
 	}
 
 	.aboutImg {
-		/* margin-top: 100px; */
 		width: 460px;
 		height: 400px;
 	}
