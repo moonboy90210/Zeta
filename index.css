@@ -57,8 +57,6 @@ nav {
 }
 .fa-bars {
 	color: white;
-	
-	/* border-color: #fff; */
 }
 .fa-bars:hover {
 	color: #f16821;
@@ -136,7 +134,7 @@ a {
 }
 
 .fade-up {
-	/* opacity: 0; */
+	opacity: 0;
 	transform: translateY(50px);
 	transition: all 0.3s ease-out;
 }
@@ -147,7 +145,7 @@ a {
 }
 
 .home-header {
-	padding-top: 350px;
+	padding-top: 320px;
 }
 
 .home-h1 {
