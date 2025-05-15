@@ -51,13 +51,12 @@ nav {
 	color: white;
 	font-size: 1rem;
 }
+
 .offcanvas-title {
 	color: white;
 
 }
-.fa-bars {
-	color: white;
-}
+
 .fa-bars:hover {
 	color: #f16821;
 }
@@ -89,12 +88,15 @@ a {
 .navbar.scrolled .navbar-brand {
 	color: black;
 }
+
 .navbar.scrolled .offcanvas-title {
 	color: black;
 }
-.navbar.scrolled .fa-bars{
+
+.navbar.scrolled .fa-bars {
 	color: black;
 }
+
 /* Link styles */
 .navbar .nav-link {
 	transition: color 0.3s ease;
@@ -150,11 +152,11 @@ a {
 
 .home-h1 {
 	font-size: 2rem;
-	font-weight: 700;
+	font-weight: 800;
 }
 
 .home-h2 {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	line-height: 1.5;
 }
 
@@ -233,7 +235,7 @@ ul {
 
 #services {
 	background-color: rgba(196, 192, 192, 0.205);
-	
+
 }
 
 #services a {
@@ -242,14 +244,44 @@ ul {
 
 /* industries */
 div.scroll-container {
-	overflow: auto;
-	white-space: nowrap;
-	padding: 10px;
+	display: flex;
+	overflow-x: hidden;
+	gap: 0.6rem;
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+	scroll-snap-align: start;
+	/* -webkit-overflow-scrolling: touch; iOS momentum scroll */
 }
 
 div.scroll-container img {
 	width: 100%;
 	height: auto;
+	flex: 0 0 auto;
+	scroll-snap-align: start;
+	transition: transform 0.3s ease;
+}
+
+.scroll-container img:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+.scroll-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.scroll-btn {
+	font-size: 2rem;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.scroll-btn:hover {
+	transform: scale(1.2);
 }
 
 /* watch  */
@@ -277,15 +309,16 @@ div.scroll-container img {
 	/* background-attachment: fixed; */
 
 }
+
 /* add black overlay to background image */
-.bg-image::before {    
-      content: "";
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-	  background-color: rgba(0,0,0,0.50);
+.bg-image::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color: rgba(0, 0, 0, 0.50);
 }
 
 
@@ -295,17 +328,18 @@ div.scroll-container img {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-image: url(img/medium-shot-woman-reading-document.jpg);
+	background-image: url(img/medium-shot-man-writing-box.jpg);
 	/* background-attachment: fixed; */
 }
-.bg-image2::before {    
-      content: "";
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-	  background-color: rgba(0,0,0,0.65);
+
+.bg-image2::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color: rgba(0, 0, 0, 0.65);
 }
 
 .carousel-text {
@@ -320,8 +354,12 @@ div.scroll-container img {
 
 .footer {
 	background: #333333;
-	color: #fff;
-	padding: 4em 0; 
+	color: #b4b1b1;
+	padding: 4em 0;
+}
+
+.footer li a {
+	color: #b4b1b1;
 }
 
 .btn-home2 {
@@ -338,6 +376,9 @@ div.scroll-container img {
 }
 
 @media screen and (min-width: 600px) {
+	.home-header {
+		padding-top: 27rem;
+	}
 
 	.home-h1 {
 		font-size: 3rem;
@@ -353,6 +394,7 @@ div.scroll-container img {
 		font-size: 1.5rem;
 		font-weight: 700;
 	}
+
 	.service-icon {
 		font-size: 40px;
 		position: relative;
@@ -360,22 +402,19 @@ div.scroll-container img {
 		top: 0;
 	}
 
-.icon-play {
-	margin-top: 90px;
-}
-	.aboutImg {
-		min-width: 530px;
+	.icon-play {
+		margin-top: 90px;
 	}
 
-	#contactInfo {
-		margin-top: 15px;
+	.aboutImg {
+		min-width: 530px;
 	}
 
 }
 
 @media screen and (min-width: 814px) {
 	.home-header {
-		padding-top: 30rem;
+		padding-top: 35rem;
 	}
 
 	.w-50 {
@@ -408,6 +447,14 @@ div.scroll-container img {
 	.watch-h2 {
 		font-size: 2.5rem;
 		font-weight: 200;
+	}
+
+	.contact-inner {
+		height: 200px;
+	}
+
+	.contact-inner2 {
+		height: 300px;
 	}
 
 	.carousel-inner {
@@ -453,7 +500,7 @@ div.scroll-container img {
 	}
 
 	.home-header {
-		padding-top: 18rem;
+		padding-top: 18.5rem;
 	}
 
 	.home-h1 {
@@ -470,11 +517,13 @@ div.scroll-container img {
 		font-size: 1.1rem;
 		font-weight: 500;
 	}
-.icon-play {
-	margin-top: 10px;
-}
+
+	.icon-play {
+		margin-top: 10px;
+	}
+
 	div.scroll-container img {
-		width: 33%;
+		width: 500px;
 		height: 25rem;
 		padding: 10px;
 	}
@@ -488,10 +537,8 @@ div.scroll-container img {
 		height: 400px;
 	}
 
-	#contactInfo {
-		margin-top: 22px;
-	}
 }
+
 /* @media screen and (min-width: 1400px) {
 	.home-header {
 		padding-top: 24rem;
