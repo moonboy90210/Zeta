@@ -50,7 +50,7 @@ sections.forEach(section => {
 // ----------CAROUSEL----------  
   const container = document.getElementById("scrollContainer");
     let autoScrollInterval;
-	const scrollStep = 500; // Adjust if image + gap differs
+	const scrollStep = 300; // Adjust if image + gap differs
   let userInteracted = false;
 
 
@@ -100,7 +100,7 @@ sections.forEach(section => {
   }
 
   // Detect user manual interaction
-    function detectUserInteraction() {
+    function detectUserInteraction() { 
     const stopScroll = () => userInteracted = true;
     container.addEventListener('wheel', stopScroll);
     container.addEventListener('touchstart', stopScroll);

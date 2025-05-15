@@ -66,7 +66,9 @@ a {
 }
 
 #offcanvasNavbar {
-	background-color: #7c7c7c;
+	background-color: #7c7b7bf1;
+	/* background-color: rgba(214, 209, 209, 0.205); */
+
 	max-width: 70%;
 }
 
@@ -351,7 +353,9 @@ div.scroll-container img {
 	background-color: rgba(214, 209, 209, 0.205);
 
 }
-
+.contact-inner2 {
+		height: 300px;
+	}
 .footer {
 	background: #333333;
 	color: #b4b1b1;
@@ -405,7 +409,11 @@ div.scroll-container img {
 	.icon-play {
 		margin-top: 90px;
 	}
+.w-50 {
+		max-width: 250px;
+		height: 300px;
 
+	}
 	.aboutImg {
 		min-width: 530px;
 	}
@@ -417,11 +425,7 @@ div.scroll-container img {
 		padding-top: 35rem;
 	}
 
-	.w-50 {
-		max-width: 350px;
-		height: 400px;
-
-	}
+	
 
 	.aboutImg {
 		width: 700px;
@@ -447,14 +451,6 @@ div.scroll-container img {
 	.watch-h2 {
 		font-size: 2.5rem;
 		font-weight: 200;
-	}
-
-	.contact-inner {
-		height: 200px;
-	}
-
-	.contact-inner2 {
-		height: 300px;
 	}
 
 	.carousel-inner {
@@ -531,7 +527,11 @@ div.scroll-container img {
 	.bg-image2 {
 		height: 100vh;
 	}
+.w-50 {
+		max-width: 250px;
+		height: 300px;
 
+	}
 	.aboutImg {
 		width: 620px;
 		height: 400px;
